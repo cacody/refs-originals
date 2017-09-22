@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Referrals to University of Michigan School of Dentistry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap Stylesheet -->
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+
+<div class="container">
+
+<!-- Page header -->
+  <div class="page-header">
+    <h2><img src="./images/signature-marketing_transparent_40.png" /> <span class="pull-right">Referral Form</span></h2>
+  </div>
+
+<!-- Form Container -->
+ <div class="container">
+ <!-- "Referred By" Form Section -->
+ <form role="form" enctype="multipart/form-data" action="process.php" method="post" class="form-horizontal">
+	<div class="well">
+	<legend>Referred By</legend>
+  <div class="form-group">
+    <label for="doctorname" class="col-sm-3 control-label">Doctor Name</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="doctorname" name="doctorname" placeholder="Referring Doctor Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="practicename" class="col-sm-3 control-label">Practice Name</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="practicename" name="practicename" placeholder="Referring Practice Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="address" class="col-sm-3 control-label">Street Address</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="address" name="address" placeholder="Address">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="city" class="col-sm-3 control-label">City</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="city" name="city" placeholder="City">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="state" class="col-sm-3 control-label">State or Province</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="state" name="state" placeholder="State or Province">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="zipcode" class="col-sm-3 control-label">Zip or Postal Code</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="zipcode" name="zipcode" placeholder="Zip or Postal Code">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="phone" class="col-sm-3 control-label">Phone Number</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control save-field" id="phone" name="phone" placeholder="123-123-1234">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="col-sm-3 control-label">Email</label>
+    <div class="col-sm-9">
+    <input type="email" class="form-control save-field" id="email" name="email" placeholder="Enter email">
+    </div>
+  </div>
+  
+  <a href="#" class="btn btn-success" id="save-data-fields">Save for next submission</a>
+	</div>
+	
+	<div class="well">
+	<legend>Patient Information</legend>
+  <!-- "Patient Information" Form Section -->
+  <div class="form-group">
+    <label for="patientname" class="col-sm-3 control-label">Patient Name</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control" id="patientname" name="patientname" placeholder="Patient Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="dob" class="col-sm-3 control-label">Date of Birth</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control" id="dob" name="dob" placeholder="mm-dd-yyyy">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="gender" class="col-sm-3 control-label">Gender</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control" id="gender" name="gender" placeholder="male/female/intersex">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ethnicity" class="col-sm-3 control-label">Ethnicity</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control" id="ethnicity" name="ethnicity" placeholder="hispanic or non-hispanic">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="race" class="col-sm-3 control-label">Race</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control" id="race" name="race" placeholder="white/native/asian/african/islander">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="historyalerts" class="col-sm-3 control-label">Dental History and Alerts</label>
+    <div class="col-sm-9">
+    <input type="text" class="form-control" id="historyalerts" name="historyalerts" placeholder="surgeries, allergies">
+    </div>
+  </div>
+	</div>
+
+<div class="well">
+<legend>Supporting Documentation</legend>
+  <div class="row">
+  <div class="col-xs-6">Upload any pictures or supporting documentation</div>
+  <div class="form-group col-xs-6">
+    <label class="btn btn-primary btn-block btn-file">
+    Upload files: <input type="file" id="referralFileUpload" name="referralfile" hidden>
+    </label>
+  </div>
+  </div>
+</div>
+
+<div class="well">
+<h2>What type of referral are you submitting?</h2>
+<!-- customized section for each discipline or type of referral -->
+<ul class="nav nav-pills nav-justified">
+  <li role="presentation"><a href="#tab1" data-toggle="tab">CBCT</a></li>
+  <li role="presentation"><a href="#tab2" data-toggle="tab">OMSHD</a></li>
+  <li role="presentation"><a href="#tab3" data-toggle="tab">PAES</a></li>
+  <li role="presentation"><a href="#tab4" data-toggle="tab">Endo</a></li>
+
+</ul>
+</div>
+
+<div class="tab-content clearfix">
+    <div class="tab-pane" id="tab1">
+        <!-- Basic address information for CBCT referrals -->
+          <address>
+            <strong>Erika Benavides, DDS, PhD</strong><br>
+            Diplomate, American Board of Oral and Maxillofacial Radiology<br>
+            University of Michigan School of Dentistry Dental Faculty Associates<br>
+            1011 N. University Avenue, Room 1340, Ann Arbor, MI 48104-1078<br>
+            Tel: 734-764-3155  Fax: 734-615-4784<br>
+          </address>
+          <address>
+            <strong>CBCT Services</strong><br>
+            dent-cbct@umich.edu
+          </address>
+        <!-- Form explanatory paragraph -->
+          <p>Appointments are made through Dental Faculty Associates (DFA) (734-764-3155). 
+          Patient should report to DFA (room 1340, first floor, School of Dentistry) 30 minutes before appointment to register. 
+          Registration material will be sent to the patient in advance if there is enough time before the appointment.
+          </p>
+          
+         <!-- "Region and Field of View" Form Section -->
+            <div class="well">
+            <legend>Region and Field of View</legend>
+            
+            <div class="form-group">
+            <label class="help-block">Field of View</label>
+            <label class="checkbox-inline" for="fieldofview">
+              <input type="checkbox" name="fieldofview[]" value="FullHead"> FullHead
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="BothJaws"> BothJaws
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="Maxilla"> Maxilla
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="Mandible"> Mandible
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="MaxR"> MaxR
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="MaxAnt"> MaxAnt
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="MaxL"> MaxL
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="MandR"> MandR
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="MandAnt"> MandAnt
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="MandL"> MandL
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="TMJ:ClosedMouth"> TMJ:ClosedMouth
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="fieldofview[]" value="TMJ:OpenMouth"> TMJ:OpenMouth
+            </label>
+            </div>
+          <div class="form-group">
+            <label class="sr-only" for="fovcomment">Comments on Field of View</label>
+            <input type="text" class="form-control" id="fovcomment" name="fovcomment" placeholder="Comments on Field of View">
+          </div>
+          
+          <div class="form-group">
+            <label class="help-block">Reasons for Scan</label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Implants"> Implants
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Impaction"> Impaction
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="TMJ"> TMJ
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Sinuses"> Sinuses
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Trauma"> Trauma
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Surgery"> Surgery
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Pathology"> Pathology
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="reasonforscan[]" value="Other"> Other - please explain
+            </label>
+            </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="reasoncomment">Comments on Reasons for Scan</label>
+            <input type="text" class="form-control" id="reasoncomment" name="reasoncomment" placeholder="Comments on Reasons for Scan">
+          </div>
+        <!-- "Scan Options" Form Section -->
+            <div class="form-group">
+            <label class="help-block">Scan Options</label>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="scanoptions[]" value="With imaging stent/splint"> With imaging stent/splint
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="scanoptions[]" value="Separate Jaws"> Separate Jaws
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="scanoptions[]" value="Separate lip/cheek"> Separate lip/cheek
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="scanoptions[]" value="Specific request - please explain"> Specific request - please explain
+            </label>
+          </div>
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="optcomment">Comments on Scan Options</label>
+            <input type="text" class="form-control" id="optcomment" name="optcomment" placeholder="Comments on Scan Options">
+          </div>
+        <!-- "Image Data Output" Form Section -->
+            <div class="form-group">
+            <label class="help-block">Image Data Output</label>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="imageoutput[]" value="Report by email"> Report by email
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="imageoutput[]" value="DICOM files"> DICOM files
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="imageoutput[]" value="Scan with viewer included"> Scan with viewer included
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="imageoutput[]" value="Specific request - please explain"> Specific request - please explain
+            </label>
+          </div>
+            </div>
+            <div class="form-group">
+            <label class="sr-only" for="datacomment">Comments on Data Output</label>
+            <input type="text" class="form-control" id="datacomment" name="datacomment" placeholder="Comments on Data Output">
+          </div>
+            </div>
+          
+            <div class="well">
+          <div class="form-group">
+            <label class="sr-only" for="referralcomment">Comments on Referral</label>
+            <input type="text" class="form-control" id="referralcomment" name="referralcomment" placeholder="Comments on Referral">
+          </div>
+            ** Referral submission disabled in development environments **
+          <button type="submit" id="submit-cbct" name="submit" class="btn btn-default" value="cbct">Submit Referral</button>
+            </div>
+	
+    </div> <!-- end tab1 -->
+    
+    <div class="tab-pane" id="tab2">
+        OMSHD stuff
+    </div> <!-- end tab2 -->
+</div>
+
+
+</form>
+
+</div> <!-- / form .container -->
+
+</div> <!-- / .container -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//code.jquery.com/jquery.js"></script>
+<!-- Bootstrap Javascript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    
+<script>
+$(document).ready(function(){
+    dataLoad();
+    $(document).on("click", "#save-data-fields", function(){
+        dataSave();
+    });
+});
+
+function dataLoad() {
+    if (localStorage.getItem('fieldString') !== null) {
+        var inputParse = JSON.parse(localStorage.getItem('fieldString'));
+        $.each(inputParse, function (key, value) {
+            var field = document.getElementById(key);
+            if(field.type == 'radio' || field.type == 'checkbox'){
+                field.checked = value;
+            }else{
+                field.value = value;
+            }
+        });
+    }
+}
+
+function dataSave(){
+    var mngrFields = {};
+    
+    $(".save-field").each(function(){
+        if (this.type == "radio" || this.type == "checkbox"){
+            mngrFields[this.id] = this.checked;
+        } else {
+            mngrFields[this.id] = this.value;
+        }
+    });
+    localStorage.setItem('fieldString', JSON.stringify(mngrFields));
+}
+</script>
+
+<style>
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+</style>
+
+</body>
+</html>
